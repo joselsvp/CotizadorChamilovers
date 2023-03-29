@@ -1,17 +1,20 @@
-const buttonPlus = document.querySelector(".plus-btn");
-const buttonMinus = document.querySelector(".minus-btn");
+const buttonPlus = document.querySelectorAll(".plus-btn");
+const buttonMinus = document.querySelectorAll(".minus-btn");
 
-let amount = 0;
 
-buttonPlus.addEventListener("click", function(e){
-    amount++;
-    buttonPlus.closest('.quantity').children[1].value = amount;
+buttonPlus.forEach(function(button) {
+    button.addEventListener("click", function(e){
+        button.closest('.quantity').children[1].value = parseInt( button.closest('.quantity').children[1].value) + 1;
+    });
 });
 
-buttonMinus.addEventListener("click", function(e){
-    currentValue = buttonMinus.closest('.quantity').children[1].value;
-    if(currentValue > 0){
-        amount--;
-    }
-    buttonMinus.closest('.quantity').children[1].value = amount;
+
+buttonMinus.forEach(function(button){
+    button.addEventListener("click", function(e){
+        let currentValue = button.closest('.quantity').children[1].value;
+        if(currentValue > 0){
+            currentValue--;
+        }
+        button.closest('.quantity').children[1].value = currentValue;
+    });
 });
