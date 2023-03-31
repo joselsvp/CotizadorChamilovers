@@ -160,6 +160,21 @@ input:focus {
   font-weight: 300;
 }
 
+.content-pay {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.button-pay {
+  border: none;
+  border-radius: 4px;
+  background-color: #b40f99;
+  padding: 10px;
+  width: 100px;
+  font-size: 16px;
+  color: #fff;
+}
+
 /* Responsive */
 @media (max-width: 800px) {
   .shopping-cart {
