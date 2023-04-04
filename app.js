@@ -21,13 +21,15 @@ function showTotalBox(productsAdd){
     summaryTotal.innerHTML = totalAddProducts;
 }
 
-buttonMinus.forEach(function(button){
+buttonMinus.forEach(function(button, index){
     button.addEventListener("click", function(e){
         let currentValue = button.closest('.quantity').children[1].value;
         if(currentValue > 0){
+            productsAdd[index] = productsAdd[index] - 1;
+            showTotalBox(productsAdd)
             currentValue--;
         }
-        productsAdd[index] = totalAddItems;
+     
 
         button.closest('.quantity').children[1].value = currentValue;
     });
