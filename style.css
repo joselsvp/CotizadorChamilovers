@@ -181,11 +181,10 @@ input:focus {
 /* Responsive */
 @media (max-width: 800px) {
   .shopping-cart {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    overflow: hidden;
-
+    justify-content: center;
+  }
+  .content{
+    width: auto;
   }
   .item {
     height: auto;
