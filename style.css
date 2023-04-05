@@ -176,6 +176,7 @@ input:focus {
   width: 100px;
   font-size: 16px;
   color: #fff;
+  margin-right: 15px;
 }
 
 /* Responsive */
