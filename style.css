@@ -148,6 +148,13 @@ button[class*=btn] {
   cursor: pointer;
 }
 
+input[type="number"]{
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+}
+
 button:focus,
 input:focus {
   outline:0;
@@ -166,6 +173,14 @@ input:focus {
 .content-pay {
   padding: 20px;
   background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content-pay .color-number {
+  color: #37a61e;
 }
 
 .button-pay {
@@ -173,7 +188,8 @@ input:focus {
   border-radius: 4px;
   background-color: #b40f99;
   padding: 10px;
-  width: 100px;
+  width: 120px;
+  height: 50px;
   font-size: 16px;
   color: #fff;
   margin-right: 15px;
@@ -191,6 +207,11 @@ input:focus {
     height: auto;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .content-pay{
+    flex-direction: column;
+    gap: 10px;
   }
   
   .quantity,
