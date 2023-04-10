@@ -11,19 +11,31 @@ body {
   margin: 0;
   background-color: #6a0656;
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
-.content {
+.content, .content-pay {
   width: 1200px;
-  height: auto;
-  margin: 80px auto;
-  background: #FFFFFF;
+  background: #FFF;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
-  border-radius: 6px;
 }
+
+.content {
+  margin: 80px auto 10px auto;
+  height: 550px;
+  border-radius: 6px;
+  overflow-y: auto;
+}
+
+.content, .content-pay, .title {
+  border-radius: 6px;
+
+}
+
 .shopping-cart {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .img-icon {
@@ -44,6 +56,9 @@ body {
   color: #5E6977;
   font-size: 18px;
   font-weight: 400;
+  position: fixed;
+  width: inherit;
+  background: #FFF;
 }
 
 .item {
@@ -171,6 +186,7 @@ input:focus {
 }
 
 .content-pay {
+  margin: 10px auto;
   padding: 20px;
   background-color: #f7f7f7;
   display: flex;
@@ -202,6 +218,7 @@ input:focus {
   }
   .content{
     width: auto;
+    margin-top: 0;
   }
   .item {
     height: auto;
@@ -209,9 +226,14 @@ input:focus {
     justify-content: center;
   }
 
+  .title{
+    position: static;
+  }
+
   .content-pay{
     flex-direction: column;
     gap: 10px;
+    width: auto;
   }
   
   .quantity,
